@@ -1,3 +1,56 @@
+//104 Max Depth Binary Tree
+
+/**
+ * RECURSION: make some function that takes the things to recurse,
+ * and a counter or whatever you need
+ *
+ * go through left and right subtree
+ *
+ * check for null node to stop and check values of what to count
+ */
+
+// function maxDepth(root: TreeNode | null): number {
+//     let maxDepth = 0;
+
+//   const recursve = (node: TreeNode | null | undefined, depth: number) => {
+//     if(!node) {
+//           maxDepth = Math.max(maxDepth, depth - 1);
+//     return;
+//     }
+//     recursve(node?.left, depth + 1);
+//     recursve(node?.right, depth + 1);
+//   };
+
+//   recursve(root, 1);
+//   return maxDepth;
+// };
+
+// 191. number of 1 bits
+// function hammingWeight(n: number): number {
+//   let i = 32;
+//   let count = 0;
+
+//   while (i >= 0) {
+//     if ((n & 1) === 1) {
+//       count++;
+//     }
+//     n >>= 1;
+//     i--;
+//   }
+//   return count;
+// }
+
+//35. Search Inset Position in O(logn)
+
+// function searchInsert(nums: number[], target: number): number {
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] >= target) {
+//       return i;
+//     }
+//   }
+//   return nums.length;
+// }
+
 //27. Remove Element
 // function removeElement(nums: number[], val: number): number {
 //     let count = 0;
