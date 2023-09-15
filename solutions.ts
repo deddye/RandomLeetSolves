@@ -1,3 +1,18 @@
+//226. Invert Binary Tree
+// function invertTree(root: TreeNode | null): TreeNode | null {
+//     if (root === null)
+//         return root;
+//     let temp: TreeNode = root.left;
+
+//     root.left = root.right;
+//     root.right = temp;
+
+//     invertTree(root.left);
+//     invertTree(root.right);
+
+//     return root;
+// };
+
 //Implement a stack
 
 // class MinStack {
