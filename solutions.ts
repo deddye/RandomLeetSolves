@@ -1,3 +1,128 @@
+//Implement a stack
+
+// class MinStack {
+//   min = 0;
+//   stack: number[] = [];
+//   constructor() {}
+
+//   push(val: number): void {
+//     this.stack.push(val);
+//     if (this.stack.length === 1) {
+//       this.min = val;
+//     }
+//     if (val < this.min) {
+//       this.min = val;
+//     }
+//   }
+
+//   pop(): void {
+//     this.stack.pop();
+//     this.min = Math.min(...this.stack);
+//   }
+
+//   top(): number {
+//     return this.stack[this.stack.length - 1];
+//   }
+
+//   getMin(): number {
+//     return this.min;
+//   }
+// }
+
+//392. Is Subsequence
+// function isSubsequence(s: string, t: string): boolean {
+//   let i = 0;
+//   let j = 0;
+//   while (i < s.length && j < t.length) {
+//     if (s[i] === t[j]) {
+//       i++;
+//       j++;
+//       continue;
+//     }
+//     j++;
+//   }
+
+//   return i === s.length;
+// }
+
+//26. Remove duplicates from sorted array
+// function removeDuplicates(nums: number[]): number {
+//   let k = 1;
+// let s: number[] = [];
+// nums = nums.filter((value) => {
+//   if (!s.includes(value)) {
+//     count++;
+//     s.push(value);
+//   }
+//   return !s.includes(value);
+// });
+
+// for (let i = 0; i < nums.length; i++) {
+//   if (s.includes(nums[i])) {
+//     continue;
+//   }
+//   s.push(nums[i]);
+//   count++;
+// }
+
+// console.log(s);
+// nums = s;
+// return count;
+
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[i] !== nums[i - 1]) {
+//       nums[k] = nums[i];
+//       k++;
+//     }
+//   }
+//   return k;
+// }
+
+//3 Longest substring without repeating characters
+// function lengthOfLongestSubstring(s: string): number {
+//   let longest = 0;
+
+//   let substring: string[] = [];
+
+//   for (const c of s) {
+//     if (!substring.includes(c)) {
+//       substring.push(c);
+//     } else if (substring.includes(c)) {
+
+//       substring = substring.splice(substring.indexOf(c) + 1);
+//       substring.push(c);
+
+//     }
+//     if (substring.length > longest) longest = substring.length;
+//   }
+//   return longest;
+// }
+
+//135. Min SubArray
+
+// function minSubArrayLen(target: number, nums: number[]): number {
+
+//   let left = 0;
+//   let answer = Infinity;
+//   let sum = 0;
+
+//   for (let right = 0; right < nums.length;right++) {
+
+//     sum+=nums[right];
+
+//     if (sum < target ) continue;
+
+//     while (sum-nums[left] >= target) {
+//       sum -= nums[left];
+//       left++;
+//     }
+//     answer = Math.min(answer, right-left+1);
+
+//   }
+
+//   return answer === Infinity ? 0 : answer;
+// };
+
 //104 Max Depth Binary Tree
 
 /**
