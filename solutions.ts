@@ -1,3 +1,46 @@
+class TreeNode {
+  val: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
+  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
+  }
+}
+
+//
+
+// 1768. Merge Strings Alternately
+// function mergeAlternately(word1: string, word2: string): string {
+//   let length = Math.min(word1.length, word2.length);
+//   let ans = "";
+//   let i = 0;
+//   for (i; i < length; i++) {
+//     ans += word1[i];
+//     ans += word2[i];
+//   }
+//   ans += word1.substring(i);
+//   ans += word2.substring(i);
+
+//   return ans;
+// }
+
+//101. Symmetric Tree
+// function isSymmetric(root: TreeNode | null): boolean {
+//   const checkMirror = (n1: TreeNode | null, n2: TreeNode | null): boolean => {
+//     if (n1 === null && n2 === null) return true;
+//     if (n1 === null || n2 === null) return false;
+
+//     return (
+//       n1.val === n2.val &&
+//       checkMirror(n1.left, n2.right) &&
+//       checkMirror(n1.right, n2.left)
+//     );
+//   };
+//   return checkMirror(root, root);
+// }
+
 //226. Invert Binary Tree
 // function invertTree(root: TreeNode | null): TreeNode | null {
 //     if (root === null)
